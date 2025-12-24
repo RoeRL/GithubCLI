@@ -12,3 +12,10 @@ def createRepo(PAT_KEY):
 
     data = {"name" : "{}".format(RepositoryName)}
     requests.post(url, data = json.dumps(data), headers=headers)
+
+def deleteRepo(Username, RepoName):
+    headers = {"Authorization" : "token {}".format(token)}
+    username = Username
+    RepositoryName = RepoName
+    url = url = "https://api.github.com/user/repos/{}/{}".format(username, RepositoryName)
+    requests.delete(url, headers=headers)
