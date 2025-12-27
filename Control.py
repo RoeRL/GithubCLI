@@ -8,6 +8,9 @@ class GitCLI():
         self.username = username
         self.headers = {"Authorization" : "token {}".format(private_key)}
 
+    def testingFunc(self):
+        print(self.private_key + " " + self.username)
+
     def createRepo(self):
         try:
             __RepositoryName = input("Enter your repository name: ")
